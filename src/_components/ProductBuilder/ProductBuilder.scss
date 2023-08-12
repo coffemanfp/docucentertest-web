@@ -1,0 +1,24 @@
+.product-builder {
+    background-color: white;
+    padding: 20px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    box-shadow: 5px 5px 15px -3px rgba(0, 0, 0, 0.1);
+
+    >* {
+        margin-bottom: 20px;
+    }
+
+    &__title {
+        font-weight: 500;
+    }
+
+    &__input {
+        padding: 5px 20px;
+        border: 1px solid black;
+        border-radius: 20px;
+    }
+
+}

@@ -1,0 +1,126 @@
+.product {
+    position: relative;
+    background-color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    box-shadow: 5px 5px 15px -3px rgba(0, 0, 0, 0.1);
+
+    &__input:nth-child(1) {
+        grid-area: 1 / 1 / 2 / 2;
+    }
+
+    &__input:nth-child(2) {
+        grid-area: 1 / 2 / 2 / 3;
+        text-align: right;
+    }
+
+    &__input:nth-child(3) {
+        grid-area: 2 / 1 / 3 / 2;
+    }
+
+    &__input:nth-child(4) {
+        grid-area: 2 / 2 / 3 / 3;
+        text-align: right;
+    }
+
+    &--expanded {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+
+        > :nth-child(1) {
+            grid-area: 1 / 1 / 2 / 2;
+        }
+
+        > :nth-child(2) {
+            grid-area: 1 / 2 / 2 / 3;
+        }
+
+        > :nth-child(3) {
+            grid-area: 2 / 1 / 3 / 2;
+        }
+
+        > :nth-child(4) {
+            grid-area: 2 / 2 / 3 / 3;
+        }
+
+        > :nth-child(5) {
+            grid-area: 3 / 1 / 4 / 2;
+        }
+
+        > :nth-child(6) {
+            grid-area: 3 / 2 / 4 / 3;
+            text-align: right;
+        }
+
+        > :nth-child(7) {
+            grid-area: 4 / 1 / 5 / 2;
+        }
+
+        > :nth-child(8) {
+            grid-area: 4 / 2 / 5 / 3;
+            text-align: right;
+        }
+
+        > :nth-child(9) {
+            grid-area: 5 / 1 / 6 / 2;
+        }
+
+        > :nth-child(10) {
+            grid-area: 5 / 2 / 6 / 3;
+            text-align: right;
+        }
+    }
+
+    .product__text {
+        font-weight: 500;
+    }
+
+    .product__input {
+        font-weight: 500;
+
+        &>input {
+            margin-left: 10px;
+            border: none;
+        }
+    }
+
+    .product__button {
+        position: absolute;
+        background-color: white;
+        border-radius: 50%;
+        border: 1px solid black;
+        height: 40px;
+        width: 40px;
+        padding: 0;
+        bottom: -10px;
+
+        &--delete {
+            top: -10px;
+            right: 10px;
+
+            >i {
+                color: rgb(254, 41, 41);
+            }
+        }
+
+        &--expand {
+            right: 49%;
+        }
+
+        &--submit {
+            top: -10px;
+            right: 60px;
+
+            >i {
+                color: rgb(48, 41, 254);
+            }
+        }
+    }
+}

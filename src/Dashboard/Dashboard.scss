@@ -1,0 +1,39 @@
+.dashboard {
+    min-height: 100vh;
+    min-width: 100vw;
+    height: 100vh;
+    width: 100vw;
+    background-color: #F5F2EA;
+
+    .dashboard__header {
+        padding: 30px;
+    }
+
+    .dashboard__container {
+        display: flex;
+        padding: 70px 0 70px 0;
+        box-sizing: border-box;
+
+        .dashboard__aside {
+            padding: 0 40px;
+        }
+
+        .dashboard__main {
+            flex-basis: 80%;
+            margin: 0 40px 0 40px;
+        }
+    }
+
+    .dashboard__footer {
+        text-align: center;
+
+        .dashboard__button--log-out {
+            border: 1px solid white;
+            background-color: rgb(192, 0, 0);
+            font-weight: bold;
+            border-radius: 20px;
+            padding: 10px 20px;
+            color: white
+        }
+    }
+}
