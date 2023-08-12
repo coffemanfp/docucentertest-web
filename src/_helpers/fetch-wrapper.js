@@ -1,7 +1,8 @@
 export const createURL = (url, params) => {
     return baseURL + url + (params ? '?' + new URLSearchParams(params) : '')
 }
-const baseURL = 'http://localhost:8080/v1/'
+
+const baseURL = process.env.REACT_APP_BASE_URL || 'http://localhost:8080/v1/'
 
 export const fetchWrapper = {
     get: request('GET'),

@@ -7,8 +7,6 @@ import Login from './Login/Login'
 import Register from './Register/Register'
 import Dashboard from './Dashboard/Dashboard'
 import PrivateRoute from './_components/PrivateRoute/PrivateRoute'
-import { Provider } from 'react-redux'
-import { store } from './_store/store'
 import { createURL, fetchWrapper } from './_helpers/fetch-wrapper'
 
 const router = createBrowserRouter([
@@ -42,7 +40,5 @@ const router = createBrowserRouter([
 ])
 
 createRoot(document.getElementById("root")).render(
-  <Provider store={store}>
-    <RouterProvider router={router} />
-  </Provider>
+  <RouterProvider router={router} />
 )
